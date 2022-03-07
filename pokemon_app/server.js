@@ -1,24 +1,25 @@
 const express = require('express')
-const pokemon = require('./models/pokemon.js')
 const app = express()
+const port = 3000
+const pokemon = require('./models/pokemon.js')
+
 
 app.set('view engine', 'jsx');
   app.engine('jsx', require('express-react-views').createEngine());
 
 
 app.get('/', (req, res) => {
-    res.send('Welcome to the Pokemon App!')
+   // res.send('Welcome to the Pokemon App!')
+    res.send(pokemon)
 })
 
 app.get('/pokemon', (req, res)=> {
-    res.render('Index')
+    res.render('Index', {pokemon: pokemon}
+    )
 })
 
 
-var port = process.env.PORT || 3000;
 
-
-
-app.listen(3000, () => {
-    console.log('listening');
+app.listen(port, () => {
+    console.log(`listening on port: ${port}`);
 });
