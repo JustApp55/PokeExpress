@@ -9,8 +9,7 @@ app.set('view engine', 'jsx');
 
 
 app.get('/', (req, res) => {
-   // res.send('Welcome to the Pokemon App!')
-    res.send(pokemon)
+    res.send('Welcome to the Pokemon App!')
 })
 
 app.get('/pokemon', (req, res)=> {
@@ -18,8 +17,13 @@ app.get('/pokemon', (req, res)=> {
     )
 })
 
+app.get('/pokemon/:id', (req, res)=> {
+    res.send('Show', {pokemon: pokemon[req.params.id]})
+})
 
 
-app.listen(port, () => {
-    console.log(`listening on port: ${port}`);
+
+
+app.listen(port,() => {
+    console.log('listening on port' , port);
 });

@@ -14,20 +14,19 @@ const React = require('react');
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PokeExpress</title>
 </head>
-            <body style={{backgroundColor: '#ffc8dd'}}>
+            <body style={{backgroundColor: '#eaf4f4'}}>
                   <div>
                   <h1 style = {{color:'#023e8a'}}>See All The Pokemon!</h1>
 
                   <ul>
                         {pokemon.map((poke, i) => {
-                            const pokeName = poke.name.charAt(0).toUpperCase() + poke.name.slice(1)
+                            //const pokeName = poke.name.charAt(0).toUpperCase() + poke.name.slice(1)
                             return (
                                 <li>
-                                    <a style = {{color:'#14213d', fontSize: '25px'}} href={`/pokemon/${i}`}>
-                                        {pokeName}
-                                    </a>{' '}
-                                    <br />
-                                    <br />
+                                    <a style = {{color:'#14213d'}} href={`/pokemon/${i}`}>
+                                        {poke.name}
+                                    </a>
+                                    <br></br>
                                 </li>
                             );
                         })}
