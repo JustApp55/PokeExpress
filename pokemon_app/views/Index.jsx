@@ -18,9 +18,9 @@ const React = require('react');
                   <div>
                   <h1 style = {{color:'#023e8a'}}>See All The Pokemon!</h1>
 
-                  <ul>
+                   <ul>
                         {pokemon.map((poke, i) => {
-                            //const pokeName = poke.name.charAt(0).toUpperCase() + poke.name.slice(1)
+                         
                             return (
                                 <li>
                                     <a style = {{color:'#14213d'}} href={`/pokemon/${i}`}>
@@ -40,3 +40,25 @@ const React = require('react');
 
   module.exports = Index
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //   const pokeName = poke.name.charAt(0).toUpperCase() + poke.name.slice(1)
