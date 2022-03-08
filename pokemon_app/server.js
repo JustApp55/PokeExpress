@@ -1,9 +1,11 @@
 // Import the express library here
 const express = require('express')
+const pokemon = require('./models/pokemon.js')
+
 // Instantiate the app here
 const app = express()
 const port = 3000
-const pokemon = require('./models/pokemon.js')
+
 
 
 app.set('view engine', 'jsx');
@@ -25,12 +27,7 @@ app.get('/pokemon/:id', (req, res)=> {
 
 
 
-
-// app.listen(port,() => {
-//     console.log('listening on port' , port);
-// });
-
 // Invoke the app's `.listen()` method 
-app.listen(PORT, ()=>{
-    console.log(`${PORT}`)
-})
+app.listen(port,() => {
+    console.log('listening on port' , port);
+});

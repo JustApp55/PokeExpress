@@ -20,11 +20,10 @@ const React = require('react');
 
                    <ul>
                         {pokemon.map((poke, i) => {
-                         
                             return (
                                 <li>
                                     <a style = {{color:'#14213d'}} href={`/pokemon/${i}`}>
-                                        {poke.name}
+                                        {pokename}
                                     </a>
                                     <br></br>
                                 </li>
